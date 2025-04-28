@@ -13,48 +13,64 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="fancy-lava">TinyCraft</h1>
-      <p class="fancy-silver">Minecraft 8x8 Texture Pack</p>
-      <button class="ui huge inverted button explore">Explore Now</button>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <h1 class="loading-title">TinyCraft</h1>
+      <p class="loading-subtitle">Loading your adventure...</p>
+      <div class="ui active tiny inline loader"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- Features Section -->
-  <section class="features-section">
-    <div class="ui stackable three column grid container">
-      <div class="column center aligned">
-        <i class="cube icon feature-icon"></i>
-        <h2 class="fancy-cyan">8x8 Art</h2>
-        <p class="feature-desc">Experience Minecraft with this 8x8 texture!</p>
+  <!-- Main Content (Hidden initially) -->
+  <div id="main-content" style="display: none;">
+  
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="fancy-lava">TinyCraft</h1>
+        <p class="fancy-silver">Minecraft 8x8 Texture Pack</p>
+        <a href="https://www.mediafire.com/your-download-link-here" target="_blank" class="ui huge inverted button explore">
+          <i class="download icon"></i> Download Now
+        </a>
       </div>
-      <div class="column center aligned">
-        <i class="magic icon feature-icon"></i>
-        <h2 class="fancy-purple">Vibrant Environments</h2>
-        <p class="feature-desc">Explore the world with vibrant, pixel-perfect textures.</p>
-      </div>
-      <div class="column center aligned">
-        <i class="leaf icon feature-icon"></i>
-        <h2 class="fancy-green">Optimized Performance</h2>
-        <p class="feature-desc">Smooth performance on lower-end devices, no lag.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- New Bonus Section -->
-  <section class="bonus-section">
-    <div class="bonus-content">
-      <h2 class="fancy-gold">Exclusive Bonus Packs</h2>
-      <p class="bonus-text">Unlock additional pixel art skins and world textures with our bonus content.</p>
-    </div>
-  </section>
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="ui stackable three column grid container">
+        <div class="column center aligned">
+          <i class="cube icon feature-icon"></i>
+          <h2 class="fancy-cyan">8x8 Art</h2>
+          <p class="feature-desc">Experience Minecraft with this 8x8 texture!</p>
+        </div>
+        <div class="column center aligned">
+          <i class="magic icon feature-icon"></i>
+          <h2 class="fancy-purple">Vibrant Environments</h2>
+          <p class="feature-desc">Explore the world with vibrant, pixel-perfect textures.</p>
+        </div>
+        <div class="column center aligned">
+          <i class="leaf icon feature-icon"></i>
+          <h2 class="fancy-green">Optimized Performance</h2>
+          <p class="feature-desc">Smooth performance on lower-end devices, no lag.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 TinyCraft All rights reserved.</p>
-  </footer>
+    <!-- Bonus Section -->
+    <section class="bonus-section">
+      <div class="bonus-content">
+        <h2 class="fancy-gold">Exclusive Bonus Packs</h2>
+        <p class="bonus-text">Unlock additional pixel art skins and world textures with our bonus content.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 TinyCraft All rights reserved.</p>
+    </footer>
+
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
