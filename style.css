@@ -1,175 +1,113 @@
 body {
-  background: #0a0a0a;
-  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
-  padding: 0;
-  color: #ffffff;
-  overflow-x: hidden;
+  font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0b0b0b;
+  color: #fff;
 }
 
-.hero-section {
-  height: 100vh;
-  background: #0a0a0a;
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b0b0b;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  text-align: center;
-  position: relative;
+  z-index: 1000;
 }
 
-.hero-content {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
-}
-
-/* Moving flowing text gradients, each different */
-
-.fancy-lava {
-  font-size: 5em;
+.loading-title {
+  font-size: 4rem;
   font-weight: bold;
-  background: linear-gradient(270deg, #ff0047, #ff9900, #ff0047, #ff9900);
-  background-size: 800% 800%;
+  background: linear-gradient(270deg, #ff007a, #00ffee, #7a00ff, #ffae00);
+  background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: flowlava 8s ease infinite;
+  animation: rainbowMove 6s ease infinite;
+  margin-bottom: 20px;
 }
 
-@keyframes flowlava {
+.loading-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,0.6);
+}
+
+@keyframes rainbowMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.fancy-lava {
+  font-size: 5rem;
+  background: linear-gradient(270deg, #ff0000, #ff7a00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: lavaFlow 10s ease infinite;
 }
 
 .fancy-silver {
-  font-size: 1.8em;
-  background: linear-gradient(90deg, #cccccc, #888888);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: flowsilver 6s linear infinite;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
 }
 
-@keyframes flowsilver {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 200% 0%; }
-}
-
-.fancy-cyan {
-  background: linear-gradient(270deg, #00ffff, #00aaff, #00ffff);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: flowcyan 10s ease infinite;
-}
-
-@keyframes flowcyan {
+@keyframes lavaFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.fancy-purple {
-  background: linear-gradient(270deg, #b400ff, #6e00ff, #b400ff);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: flowpurple 9s ease infinite;
+/* Explore Button */
+.explore {
+  margin-top: 40px;
 }
 
-@keyframes flowpurple {
-  0% { background-position: 100% 50%; }
-  50% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-.fancy-green {
-  background: linear-gradient(270deg, #00ff88, #00ffaa, #00ff88);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: flowgreen 7s ease infinite;
-}
-
-@keyframes flowgreen {
-  0% { background-position: 50% 0%; }
-  50% { background-position: 0% 0%; }
-  100% { background-position: 50% 0%; }
-}
-
-.fancy-gold {
-  background: linear-gradient(270deg, #ffd700, #ffb700, #ffd700);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: flowgold 12s ease infinite;
-}
-
-@keyframes flowgold {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Features Section */
-.features-section {
-  padding: 5em 2em;
-  background: #111111;
-}
-
+/* Feature Icons */
 .feature-icon {
-  font-size: 3em !important;
+  font-size: 4rem;
   color: #ffffff;
-  margin-bottom: 1em;
-}
-
-.feature-desc {
-  color: #cccccc;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s;
+  margin-bottom: 15px;
 }
 
 /* Bonus Section */
 .bonus-section {
-  padding: 5em 2em;
-  background: #0d0d0d;
+  background-color: #111;
   text-align: center;
+  padding: 100px 20px;
 }
 
-.bonus-content {
-  max-width: 700px;
-  margin: auto;
+.fancy-gold {
+  font-size: 3rem;
+  background: linear-gradient(270deg, #ffd700, #ffa500);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: lavaFlow 8s ease infinite;
 }
 
 .bonus-text {
-  font-size: 1.5em;
-  color: #bbb;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.7);
 }
 
 /* Footer */
 .footer {
-  padding: 2em;
-  background: #0a0a0a;
-  color: #666;
   text-align: center;
-}
-
-/* Explore Button */
-.ui.button.explore {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-.ui.button.explore:hover {
-  background: white;
-  color: black;
-  box-shadow: 0 0 20px white;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
 }
