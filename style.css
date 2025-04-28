@@ -1,0 +1,175 @@
+body {
+  background: #0a0a0a;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  height: 100vh;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Moving flowing text gradients, each different */
+
+.fancy-lava {
+  font-size: 5em;
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff0047, #ff9900, #ff0047, #ff9900);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowlava 8s ease infinite;
+}
+
+@keyframes flowlava {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fancy-silver {
+  font-size: 1.8em;
+  background: linear-gradient(90deg, #cccccc, #888888);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowsilver 6s linear infinite;
+}
+
+@keyframes flowsilver {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+.fancy-cyan {
+  background: linear-gradient(270deg, #00ffff, #00aaff, #00ffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowcyan 10s ease infinite;
+}
+
+@keyframes flowcyan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fancy-purple {
+  background: linear-gradient(270deg, #b400ff, #6e00ff, #b400ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowpurple 9s ease infinite;
+}
+
+@keyframes flowpurple {
+  0% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.fancy-green {
+  background: linear-gradient(270deg, #00ff88, #00ffaa, #00ff88);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowgreen 7s ease infinite;
+}
+
+@keyframes flowgreen {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 0% 0%; }
+  100% { background-position: 50% 0%; }
+}
+
+.fancy-gold {
+  background: linear-gradient(270deg, #ffd700, #ffb700, #ffd700);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flowgold 12s ease infinite;
+}
+
+@keyframes flowgold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Features Section */
+.features-section {
+  padding: 5em 2em;
+  background: #111111;
+}
+
+.feature-icon {
+  font-size: 3em !important;
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+.feature-desc {
+  color: #cccccc;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s;
+}
+
+/* Bonus Section */
+.bonus-section {
+  padding: 5em 2em;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.bonus-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.bonus-text {
+  font-size: 1.5em;
+  color: #bbb;
+}
+
+/* Footer */
+.footer {
+  padding: 2em;
+  background: #0a0a0a;
+  color: #666;
+  text-align: center;
+}
+
+/* Explore Button */
+.ui.button.explore {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.ui.button.explore:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 20px white;
+}
