@@ -1,1 +1,1 @@
-visit and download the pack at https://eatingpiastic.github.io/TinyCrafted/
+visit and download the pack at https://eatingpiastic.github.io/TinyCraft/
