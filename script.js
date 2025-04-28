@@ -1,18 +1,10 @@
-$(document).ready(function(){
-  // Scroll to features
-  $('.explore').on('click', function() {
-    $('html, body').animate({
-      scrollTop: $('.features-section').offset().top
-    }, 800);
-  });
-
-  // Fade-in features on scroll
-  $(window).on('scroll', function(){
-    $('.feature-desc').each(function(){
-      if($(this).offset().top < $(window).scrollTop() + $(window).height() - 100){
-        $(this).css('opacity', '1');
-        $(this).css('transform', 'translateY(0)');
-      }
-    });
-  });
+// Wait until page fully loads
+window.addEventListener('load', function() {
+  setTimeout(() => {
+    document.getElementById('loading-screen').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 500); // Extra fadeout time
+  }, 2500); // 2.5 seconds loading
 });
